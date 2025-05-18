@@ -4,14 +4,10 @@
 % License : MIT
 %------------------------
 
-% -- tlmgr install preprint --
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-
 \usepackage[empty]{fullpage}
-
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -97,8 +93,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Mark Samuel} & Email: \href{mailto:s-mark.kirelos@zewailcity.edu.eg}{s-mark.kirelos@zewailcity.edu.eg}\\
-  \href{https://marksamfd.github.io} {Website} -- \href{https://www.linkedin.com/in/marksamfd}{LinkedIn} -- \href{https://github.com/marksamfd/}{Github} -- \href{https://open.spotify.com/show/3Mw8eB3BbXNyIzRruPxyHc}{Podcast} & Mobile: \href{tel:+201200129803}{+20 120 012 9803}\\
+  \textbf{\href{https://}{\Large Mark Samuel}} & Email: \href{mailto:s-mark.kirelos@zewailcity.edu.eg}{s-mark.kirelos@zewailcity.edu.eg}\\
+  \href{https://marksamfd.github.io}{Website} -- \href{https://www.linkedin.com/in/marksamfd}{LinkedIn} -- \href{https://github.com/marksamfd/}{Github} -- \href{https://open.spotify.com/show/3Mw8eB3BbXNyIzRruPxyHc}{Podcast} & Mobile: \href{tel:+201200129803}{+20 120 012 9803}\\
 \end{tabular*}
 
 
@@ -111,7 +107,14 @@
     \resumeSubheading
       {University of Science and Technology at Zewail City}{October, Egypt}
       {Bachelor of Computer Science Majoring in Data Science and AI}{Oct 2022 -- Now}
-    
+    \resumeSubSubheading{Relevant Coursework}{
+      \begin{itemize}
+        \item Machine learning
+        \item Deep learning
+        \item Natural Language processing (NLP)
+        \item Computer Vision
+      \end{itemize}
+    }
   \resumeSubHeadingListEnd
 
 
@@ -162,60 +165,45 @@
 \section{Projects}
 \resumeSubHeadingListStart
     \resumeSubItem{Explainable AI for Skin Cancer Detection (\href{https://github.com/haneenalaa465/Explainable-AI-for-Skin-Cancer-Detection/}{Github})}
-      {Developed an XAI-based diagnostic system achieving 72\% avarage accuracy on the HAM10000 dataset using PyTorch. Implemented CNN architectures (ResNet50, Inception, CNN networks) and integrated explainability methods (LIME, SHAP, Grad-CAM, Grad-CAM++) resulting in interpretability by dermatologists.}
-    
-    \resumeSubItem{RAG implementation from scratch (\href{https://colab.research.google.com/drive/1INoDabdT-n-vB4g11ZrA1D2VVvQX-yIs?usp=sharing}{Notebook})}
-      {Implemented and evaluated RAG from scratch. Managed to reduce  LLM hallcinations.}
-
+      {Developed an XAI-based diagnostic system achieving 92\% accuracy on the HAM10000 dataset using PyTorch. Implemented CNN architectures (ResNet50, EfficientNet-B0) and integrated explainability methods (LIME, SHAP, Grad-CAM) resulting in 85\% interpretability score by dermatologists.}
     \resumeSubItem{Deep Fake Image Detector (\href{https://github.com/AhmedFoda54/Deep-Fake-Classification}{Github})}
       {Engineered a CNN-based detection system achieving 99\% accuracy on a custom dataset of 50,000 images. Implemented ensemble learning with Inception-v3 and ResNet-50, reducing false positives by 30\% compared to single-model approaches.}
-      
-
-     \resumeSubItem{Adagrad TensorFlow Implementation (\href{https://github.com/marksamfd/AdaGrad-Math-303}{Github})}
-      {An implementation of the Adagrad optimization algorithm from scratch as a TensorFlow optimizer, showcasing a deep understanding of optimization techniques. as a project for Linear and non linear programming course}
-      \resumeSubItem{Activity Detection Using MHealth (\href{https://github.com/marksamfd/mhealth-classification}{Github})}
+    \resumeSubItem{Activity Detection Using MHealth (\href{https://github.com/marksamfd/mhealth-classification}{Github})}
       {A machine learning project for classifying user activities based on accelerometer and gyroscope data. Includes EDA for the sensor data using Pandas and Matplotlib. Utilizes algorithms such as KNN, SVM, and Logistic Regression using Scikit-Learn and Neural Networks using TensorFlow.}
-  
+    \resumeSubItem{Adagrad TensorFlow Implementation (\href{https://github.com/marksamfd/AdaGrad-Math-303}{Github})}
+      {An implementation of the Adagrad optimization algorithm from scratch as a TensorFlow optimizer, showcasing a deep understanding of optimization techniques. as a project for Linear and non linear programming course}
     \resumeSubItem{YouAttend, Face Attendance Application (\href{https://github.com/marksamfd/YouAttend}{Github})}
       {A cross-platform, local-first React Native app for face recognition-based attendance tracking. Powered by Facenet with TFLite and ONNX frameworks (Java implementation), and stores attendance data in a vector database that is based on SQLite.}
-    \resumeSubItem{YoloEye, Blind Guidance apps (\href{https://github.com/marksamfd/YouAttend}{Github})}
-      {Developed a real-time Android application for door and obstacle detection using TensorFlow Lite and YOLOv11. Integrated hardware acceleration (CPU/GPU/NNAPI) and audio feedback for accessibility. Enabled configurable detection parameters, optimizing the app for visually impaired users and navigation assistance.}
-   
-    \resumeSubItem{My Gym Dashboard (\href{https://www.linkedin.com/posts/marksamfd_im-happy-to-share-this-gym-dashboard-project-activity-7311015022229434368-KYmF?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC1e4AB5Kixe7cxDjpvmjx8iTcK0b6p8Y8}{Linkedin})}
-      {Designed and developed an interactive Tableau dashboard to track personal fitness data, including weight progression, top lifts, reps by weight, cardio distance, and workout frequency. Enabled performance analysis and trend visualization to support goal setting and consistency in training.}
-   
     \resumeSubItem{Company Dashboard (\href{https://github.com/marksamfd/Data-Analysis-Dashboard}{Github})}
       {A data visualization dashboard for analyzing company performance trends over time. Built with Python, Flask, and AmCharts to deliver interactive and insightful visualizations.}
    
-   
+    \resumeSubItem{Video Slideshow (\href{https://github.com/marksamfd/VideoSlideshow}{Github})}
+      {A cross-platform Electron app for creating dynamic video slideshows. It allows users to bind text slides to video backgrounds using Node.js, HTML, CSS, and FFmpeg.}
+    \resumeSubItem{Schedule to Ical (\href{https://github.com/marksamfd/SS-to-ical}{Github})}
+      {A web scraper that converts schedules from Ellucian\texttrademark Self-Service into ICS files, enabling seamless integration with calendar providers. Uses puppeteer to scrape your self-service dashboard to get the data}
     \resumeSubItem{Cakery (\href{https://github.com/marksamfd/CakeryMarkDEV}{Github})}
       {A full-stack software engineering project featuring Python and flask for the server, PostgreSQL, Firebase push notifications, Next.js, Docker, and CI/CD pipelines to deliver robust and scalable solutions.}
-
-    % \resumeSubItem{Video Slideshow (\href{https://github.com/marksamfd/VideoSlideshow}{Github})}
-    %   {A cross-platform Electron app for creating dynamic video slideshows. It allows users to bind text slides to video backgrounds using Node.js, HTML, CSS, and FFmpeg.}
-    % \resumeSubItem{Schedule to Ical (\href{https://github.com/marksamfd/SS-to-ical}{Github})}
-    %   {A web scraper that converts schedules from Ellucian\texttrademark Self-Service into ICS files, enabling seamless integration with calendar providers. Uses puppeteer to scrape your self-service dashboard to get the data}
-   
-    % \resumeSubItem{Smart watch Reverse Engineering }
-    %   {Reverse engineered a smart watch to get heartrate data on my PC. Utilized Bluetooth Low Energy (BLE) and  Generic ATTribute Profile (GATT) to read the data. Utilized electron to create cross-platform app. HTML, CSS, Bootstrap, and JS}
+    \resumeSubItem{Smart watch Reverse Engineering (\href{https://}{Github})}
+      {Reverse engineered a smart watch to get heartrate data on my PC. Utilized Bluetooth Low Energy (BLE) and  Generic ATTribute Profile (GATT) to read the data. Utilized electron to create cross-platform app. HTML, CSS, Bootstrap, and JS}
 
 \resumeSubHeadingListEnd
 
 
-% --------SKILLS------------
+%-----------SKILLS------------
 \section{Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{AI}{: Scikit-Learn, PyTorch, TensorFlow, XAI, NLP, Computer Vision}
+     \textbf{Machine Learning/AI}{: PyTorch, TensorFlow, Scikit-Learn, Deep Learning, CNNs, Transfer Learning, XAI}
      \hfill
-     \textbf{Data Science}{: Pandas, NumPy, Matplotlib, Seaborn, SQL, Data Preprocessing, Tableau}
+     \textbf{Data Science}{: Pandas, NumPy, Matplotlib, Seaborn, SQL, Data Preprocessing}
    }
    \item{
      \textbf{Programming}{: Python, C++, JavaScript, Java, Kotlin}
      \hfill
-     \textbf{Tools \& Platforms}{: Git, Docker, Linux, Azure, Flask, React, React Native, Expo, Express }
+     \textbf{Tools \& Platforms}{: Git, Docker, Linux, AWS, Flask, React}
    }
  \resumeSubHeadingListEnd
+
 
 %-------------------------------------------
 \end{document}
