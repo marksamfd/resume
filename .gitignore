@@ -15,5 +15,14 @@ Archieve/
 *.cb2
 .*.lb
 
+*.fdb_latexmk
+*.synctex.gz
+
+*.tex
+*.pdf
+!mark_samuel_resume.tex
+!mark_samuel_resume.pdf
+
+
 # github action result
 semicolon_delimited_script
