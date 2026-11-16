@@ -17,12 +17,13 @@ Archieve/
 
 *.fdb_latexmk
 *.synctex.gz
+*.bbl
+*.blg
 
 *.tex
 *.pdf
 !mark_samuel_resume.tex
-!mark_samuel_resume.pdf
-
+*.json
 
 # github action result
 semicolon_delimited_script

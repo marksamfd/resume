@@ -21,7 +21,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+% \input{glyphtounicode}
 
 \pagestyle{fancy}
 \fancyhf{} % Clear all header and footer fields
@@ -47,8 +47,8 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate PDF is machine readable/ATS parsable
-\pdfgentounicode=1
+
+
 
 %-------------------------
 % Custom commands
@@ -64,45 +64,49 @@
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
-}
+    }
+    
+    
+    
+    \newcommand{\resumeSubheading}[4]{
+      \vspace{-1pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} &\textit{\small #4} \\
+      \end{tabular*}\vspace{-5pt}
+      }
+      
+      
+      
+      \newcommand{\resumeSubSubheading}[2]{
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textit{\small#1} & \textit{\small #2} \\
+        \end{tabular*}\vspace{-5pt}
+        }
 
-
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} &\textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-
-
-\newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
+        \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+        
+        \renewcommand{\labelitemii}{$\circ$}
+        
+        \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+          \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+          \newcommand{\resumeItemListStart}{\begin{itemize}}
+            \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+            
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
+% Ensure that generate PDF is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Mark Samuel} & Email: \href{mailto:marksamfd@gmail.com}{marksamfd@gmail.com}\\
- \href{https://www.linkedin.com/in/marksamfd}{LinkedIn} -- \href{https://github.com/marksamfd/}{Github} -- \href{https://marksamfd.github.io} {Website} & Mobile: \href{tel:+201200129803}{+20 120 012 9803}\\
+  \textbf{\Large Mark Georgy} & Email: \href{mailto:marksamfd@gmail.com}{marksamfd@gmail.com}\\
+ \href{https://www.linkedin.com/in/marksamfd}{LinkedIn} -- \href{https://github.com/marksamfd/}{Github} -- \href{https://marksamfd.github.io} {Website} & Mobile: \href{tel:+36 70 406 1903}{+36 70 406 1903}\\
 \end{tabular*}
 
 
@@ -112,12 +116,12 @@
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
-  % \resumeSubheading
-  %   {Birla Institute of Technology and Science}{Pilani, India}
-  %   {Master Of Engineering in Electrical and Electronics; GPA: 3.66 (9.15/10.0)}{Aug 2008 -- July 2012}
+   \resumeSubheading
+     {ELTE Faculty of Informatics}{Budapest, Hungary}
+     {Master CS in Autonomus Systems}{September 2026 -- Now}
     \resumeSubheading
       {University of Science and Technology at Zewail City}{6th of October City, Egypt}
-      {B.Sc. Computer Science (Data Science and AI major) | GPA: 3.19}{October 2022 -- June 2026}
+      {B.Sc. Computer Science (Data Science and AI major) | GPA: 3.23}{October 2022 -- June 2026}
     
   \resumeSubHeadingListEnd
 
@@ -185,6 +189,9 @@
 }
 
 
+\resumeSubItem{Pet Portrait Printing (\href{https://github.com/marksamfd/MLOPS_study/}{Github})}
+ {Dummy FastAPI Server project to Practice MLOps, Kubernetes, Docker, and CI/CD pipelines. Implemented a pet portrait printing service with image processing and model deployment.}
+
 \resumeSubItem{Explainable AI for Skin Cancer Detection (\href{https://github.com/haneenalaa465/Explainable-AI-for-Skin-Cancer-Detection/}{Github})}
  {Developed an XAI-based diagnostic system achieving 72\% avarage accuracy on the HAM10000 dataset using PyTorch. Implemented CNN architectures (ResNet50, Inception, CNN networks) and integrated explainability methods (LIME, SHAP, Grad-CAM, Grad-CAM++) resulting in interpretability by dermatologists.}
 
@@ -219,8 +226,11 @@
     
     \resumeSubItem{Schedule to Ical (\href{https://github.com/marksamfd/SS-to-ical}{Github})}
       {A web scraper that converts schedules from Ellucian\texttrademark Self-Service into ICS files, enabling seamless integration with calendar providers. Uses puppeteer to scrape your self-service dashboard to get the data}
-   
-    \resumeSubItem{Smart watch Reverse Engineering }
+
+\resumeSubItem{Camera-Controlled MuJoCo Robotics Simulation (\href{https://github.com/marksamfd/RL_test}{Github})}
+      {Developed a robotics simulation prototype using MuJoCo, OpenCV, and MediaPipe. Processed webcam pose data to control a simulated SO101 robot, with plans to collect robotics data and explore foundation and vision-language-action (VLA) models.}
+
+    \resumeSubItem{Smart watch Reverse Engineering (\href{https://github.com/marksamfd/WatchReverseEngineering}{Github})}
       {Reverse engineered a smart watch to get heartrate data on my PC. Utilized Bluetooth Low Energy (BLE) and  Generic ATTribute Profile (GATT) to read the data. Utilized electron to create cross-platform app. HTML, CSS, Bootstrap, and JS}
 
 \resumeSubHeadingListEnd
